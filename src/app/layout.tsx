@@ -3,6 +3,8 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import {ThemeProvider} from "@/app/components/theme-provider";
+import Navbar from "@/app/components/Navbar/Navbar";
+import Footer from "@/app/components/footer/Footer";
 
 
 const inter = Inter({subsets:['latin'],variable:'--font-sans'});
@@ -41,7 +43,9 @@ export default function RootLayout({
           disableTransitionOnChange
 
       >
+        <Navbar/>
         {children}
+        <Footer/>
       </ThemeProvider>
 
       </body>
